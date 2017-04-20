@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FileListActivity" >
+
+    <RelativeLayout
+	    android:id="@+id/pbMainExHead"
+	    android:layout_width="fill_parent"
+	    android:layout_height="65dp"
+	    android:layout_alignParentTop="true"
+	    android:background="@color/setting_overlay"
+	    android:orientation="horizontal" >
+
+
+	    <ProgressBar
+	        android:id="@+id/progressBar1"
+	        style="?android:attr/progressBarStyleSmall"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp"/>
+	    
+	    <Button 
+		    android:id="@+id/chooseBtn"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginLeft="10dp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    />
+
+	</RelativeLayout>
+	
+    <com.icatch.wificam.app.view.FileListView
+		android:id="@+id/file_list_preview"	
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+	    android:layout_below="@id/pbMainExHead"
+	    android:layout_above="@+id/pbMainExFoot" 
+	    android:dividerHeight="1dp"/>
+    
+    <RelativeLayout
+	    android:id="@+id/pbMainExFoot"
+	    android:layout_width="fill_parent"
+	    android:layout_height="65dp"
+	    android:layout_alignParentBottom="true"
+	    android:background="@color/white"
+	    android:orientation="horizontal">
+
+	    <Button 
+		    android:id="@+id/downloadBtn"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:background="@drawable/mpb_download_btn"/>
+	  
+		<Button 
+		    android:id="@+id/viewStyle"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginRight="20dp"
+		    android:background="@drawable/ftp_switch_showstyle_toggle"/>
+
+	</RelativeLayout>
+
+</RelativeLayout>

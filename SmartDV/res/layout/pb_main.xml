@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout
+        android:id="@+id/pbMainExHead"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/head" >
+
+        <ProgressBar
+            android:id="@+id/loadingBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/mpb"
+            android:textColor="@color/lightblue"
+            android:textSize="@dimen/text_size_22" />
+<Button
+            android:id="@+id/select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/select_all" />
+<!--         <Button
+            android:id="@+id/select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/share"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/select_all" /> -->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/full_transparent" >
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/photo_wall"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/pbMainExFoot"
+        android:layout_below="@id/pbMainExHead"
+        android:background="@color/black"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:visibility="gone" />
+
+    <!--
+         <GridView 
+        android:id="@+id/video_wall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="133dp"
+        android:stretchMode="spacingWidth"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="14dp"
+        android:horizontalSpacing="2dp"
+        android:gravity="center"
+        android:layout_below="@id/pbMainExHead"
+	    android:layout_above="@+id/pbMainExFoot" 
+	    android:visibility="gone"
+	    android:paddingTop="20dp"
+	    android:paddingBottom="20dp"
+        />
+    -->
+
+
+    <!-- Bottom bar bg -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/head"
+        android:orientation="horizontal" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pbMainExFoot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/editToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_select" />
+
+        <TextView
+            android:id="@+id/totalNumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/downPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/mpb_download_btn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/downloadManager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/pbMainExHead"
+        android:background="@color/black"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/downloadTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="下载管理"
+            android:textSize="30dp" />
+           <Button
+            android:id="@+id/draw_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+        	android:layout_marginRight="20dp"
+            android:background="@drawable/cancel_all"/>
+
+        <ListView
+            android:id="@+id/downloadView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/downloadTitle"
+            android:background="@android:color/background_light"
+            android:fadeScrollbars="false"
+            android:scrollbarFadeDuration="0" />
+    </RelativeLayout>
+
+</RelativeLayout>

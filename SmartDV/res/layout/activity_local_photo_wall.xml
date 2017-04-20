@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".LocalPhotoWallActivity" >
+
+    <RelativeLayout
+        android:id="@+id/pbMainExHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/head" >
+
+<!--         <ProgressBar
+            android:id="@+id/loadingBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp" /> -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_activity_local_photo_wall"
+            android:textColor="@color/lightblue"
+            android:textSize="@dimen/text_size_22" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/pbMainExFoot"
+        android:layout_below="@+id/pbMainExHead"
+        android:background="@color/black"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:numColumns="4"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/pbMainExFoot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+
+        <TextView
+            android:id="@+id/totalNumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white" 
+            android:text="0 files"/>
+    </RelativeLayout>
+
+</RelativeLayout>

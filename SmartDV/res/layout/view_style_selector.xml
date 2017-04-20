@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="270dp"
+    android:layout_height="match_parent"
+    tools:context=".ViewStyleSelector"
+    android:padding="13dp"
+    android:background="@color/white"
+     >
+
+    <GridView 
+        android:id="@+id/viewStyleSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:columnWidth="60dp"
+        />
+
+</RelativeLayout>

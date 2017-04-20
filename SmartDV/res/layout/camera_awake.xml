@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent" >  
+        <Button  
+        android:id="@+id/camera_delete"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp" 
+		android:text="delete" 
+/>
+
+        <Button
+            android:id="@+id/camera_awake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/camera_delete"
+            android:text="awake" />
+
+        <TextView
+            android:id="@+id/camera_ssid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/camera_awake"
+            android:layout_alignBottom="@+id/camera_awake"
+            android:layout_alignParentLeft="true"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+</RelativeLayout>  
